@@ -30,7 +30,7 @@ RUN dpkg --add-architecture i386 && \
     wget -O tools.zip ${ANDROID_SDK_URL} && \
     unzip tools.zip && rm tools.zip && \
     echo y | android update sdk -a -u -t platform-tools,${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION} && \
-    chmod a+x -R $ANDROID_HOME && \
+    chmod a+wx -R $ANDROID_HOME && \
     chown -R root:root $ANDROID_HOME && \
 
     # So, we need to add the licenses here while it's still valid.
