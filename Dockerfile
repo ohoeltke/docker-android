@@ -16,7 +16,7 @@ WORKDIR /opt
 
 RUN dpkg --add-architecture i386 && \
     apt-get -qq update && \
-    apt-get -qq install -y wget curl maven ant libncurses5:i386 libstdc++6:i386 zlib1g:i386 && \
+    apt-get -qq install -y wget curl maven ant libncurses5:i386 libstdc++6:i386 zlib1g:i386 unzip && \
     
     # Installs Gradle 3.4.1
     wget -O gradle.zip https://services.gradle.org/distributions/gradle-3.4.1-bin.zip && \
