@@ -24,7 +24,7 @@ RUN dpkg --add-architecture i386 && \
     wget -O gradle.zip ${GRADLE_URL} && \
     mkdir /opt/gradle && \
     unzip -d /opt/gradle gradle.zip && rm gradle.zip && \
-
+    mkdir /.gradle && \
     # Installs Android SDK
     mkdir android && cd android && \
     wget -O tools.zip ${ANDROID_SDK_URL} && \
