@@ -33,6 +33,9 @@ RUN dpkg --add-architecture i386 && \
     echo y | android update sdk -a -u -t platform-tools,${ANDROID_APIS},build-tools-${ANDROID_BUILD_TOOLS_VERSION} && \
     chmod a+wx -R $ANDROID_HOME && \
     chown -R root:root $ANDROID_HOME && \
+    # add dir for npm
+    mkdir  /.npm && \
+    chmod a+wx -R /.npm && \
 
     # So, we need to add the licenses here while it's still valid.
     # The hashes are sha1s of the licence text, which I imagine will be periodically updated, so this code will 
